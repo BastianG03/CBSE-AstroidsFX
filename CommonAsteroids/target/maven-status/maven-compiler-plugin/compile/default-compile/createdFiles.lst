@@ -1,0 +1,4 @@
+dk/sdu/mmmi/cbse/common/asteroids/Asteroid.class
+module-info.class
+dk/sdu/mmmi/cbse/common/asteroids/AsteroidSPI.class
+dk/sdu/mmmi/cbse/common/asteroids/IAsteroidSplitter.class
