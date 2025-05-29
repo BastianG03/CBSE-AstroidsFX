@@ -1,3 +1,7 @@
+dk/sdu/mmmi/cbse/main/Main.class
+dk/sdu/mmmi/cbse/main/Game$1.class
 module-info.class
 dk/sdu/mmmi/cbse/main/Main$1.class
-dk/sdu/mmmi/cbse/main/Main.class
+dk/sdu/mmmi/cbse/main/MainSpring.class
+dk/sdu/mmmi/cbse/main/Game.class
+dk/sdu/mmmi/cbse/main/ModuleConfiguration.class

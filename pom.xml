@@ -31,6 +31,16 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>6.2.7</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>6.2.7</version>
+            </dependency>
+            <dependency>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-controls</artifactId>
                 <version>21.0.2</version>
@@ -93,7 +103,7 @@
                         I still wanted to do it for clarity, but for some reason that results
                         in "java.lang.module.FindException: Module monitor.observer.zero not found";
                         strange... -->
-                        <argument>--module=Core/dk.sdu.mmmi.cbse.main.Main</argument>
+                        <argument>--module=Core/dk.sdu.mmmi.cbse.main.MainSpring</argument>
                         <argument>--add-modules javafx.graphics</argument>
                     </arguments>
                 </configuration>
