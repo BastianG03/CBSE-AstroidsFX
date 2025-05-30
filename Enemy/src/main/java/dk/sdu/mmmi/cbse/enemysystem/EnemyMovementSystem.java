@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.Random;
 import java.util.ServiceLoader;
 
+import static java.lang.Math.abs;
 import static java.util.stream.Collectors.toList;
 
 public class EnemyMovementSystem implements IEntityProcessingService {
@@ -26,7 +27,7 @@ public class EnemyMovementSystem implements IEntityProcessingService {
                 );
             }
             int random = new Random().nextInt(4);
-            if(canMove((Enemy) enemy)) {
+            if(canMove(enemy)) {
                 switch (random) {
                     case 1:
                         enemy.setRotation(enemy.getRotation()-5);
@@ -48,9 +49,17 @@ public class EnemyMovementSystem implements IEntityProcessingService {
 
         }
         if (System.currentTimeMillis() - gameData.getLastSpawnedEnemy() >= gameData.getEnemySpawnCooldown()) {
-            Entity enemy = spawnEnemy();
-            System.out.println("Added Enemy");
-            world.addEntity(enemy);
+            Entity enemy = createEnemy();
+            for (Entity player : world.getEntities()) {
+                if (player.getType().equals("player")) {
+                    if (abs(enemy.getX() - player.getX()) > 10 && abs(enemy.getY() - player.getY()) > 10) {
+                        System.out.println("Added enemy");
+                        world.addEntity(enemy);
+                    }
+                }
+            }
+
+
             gameData.setLastSpawnedEnemy(System.currentTimeMillis());
         }
     }
@@ -70,7 +79,7 @@ public class EnemyMovementSystem implements IEntityProcessingService {
         return currentTime - lastMove >= moveCoolDown;
     }
 
-    private Entity spawnEnemy() {
+    private Entity createEnemy() {
         Entity enemy = new Enemy();
         Random rnd = new Random();
         enemy.setPolygonCoordinates(-5,-5,10,0,-5,5);

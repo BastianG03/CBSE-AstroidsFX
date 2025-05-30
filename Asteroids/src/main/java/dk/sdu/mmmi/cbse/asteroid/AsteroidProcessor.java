@@ -7,7 +7,6 @@ import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
-import dk.sdu.mmmi.cbse.playersystem.Player;
 
 import java.util.Random;
 
@@ -47,10 +46,15 @@ public class AsteroidProcessor implements IEntityProcessingService, AsteroidSPI 
         if(currentTime - gameData.getLastSpawnedAstroid() >= gameData.getAstroidCooldown()) {
             for (int i = 0; i < 3; i++) {
                 Entity asteroid = createAsteroid(gameData);
-                asteroid.setHealth(400);
-                if(asteroid.getX() - world.getEntities(Player.class).get(0).getX() < 10 || asteroid.getY()- world.getEntities(Player.class).get(0).getY() < 10) {
-                    world.addEntity(asteroid);
+                asteroid.setHealth(200);
+                for (Entity player : world.getEntities()){
+                    if(player.getType().equals("player")) {
+                        if(asteroid.getX() - player.getX() > 10 && asteroid.getY() - player.getY() > 10 || asteroid.getX() - player.getX() < 10 && asteroid.getY() - player.getY() < 10 ) {
+                            world.addEntity(asteroid);
+                        }
+                    }
                 }
+
 
             }
             gameData.setLastSpawnedAstroid(currentTime);

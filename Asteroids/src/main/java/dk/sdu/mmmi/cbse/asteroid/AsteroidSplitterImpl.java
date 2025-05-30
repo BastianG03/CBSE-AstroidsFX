@@ -5,8 +5,6 @@ import dk.sdu.mmmi.cbse.common.asteroids.IAsteroidSplitter;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.World;
 
-import java.util.Random;
-
 /**
  *
  * @author corfixen
@@ -19,14 +17,10 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             System.out.println("Too Small!!");
             return;
         }
-        //int splitAmount = new Random().nextInt(2) + 1;
-        int splitAmount = 2;
-        for (int i = 0; i < splitAmount; i++) {
-            //System.out.println(splitAmount);
+            int splitAmount = 2;
             int rndSpawn = 10;
             Entity asteroid1 = new Asteroid();
             Entity asteroid2 = new Asteroid();
-            Random randomRotation = new Random();
             double[] polygonCoords = new double[e.getPolygonCoordinates().length];
             for (int j = 0; j < polygonCoords.length; j++) {
                 polygonCoords[j] = e.getPolygonCoordinates()[j]/2;
@@ -48,7 +42,6 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             asteroid2.setHealth(200);
             asteroid2.setSide(e.getSide());
             world.addEntity(asteroid2);
-        }
 
     }
 

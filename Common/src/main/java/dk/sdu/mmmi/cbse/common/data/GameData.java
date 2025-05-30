@@ -15,7 +15,7 @@ public class GameData {
     private int enemyMoveCooldown = 100;
     private long lastSpawnedAstroid;
     private long lastSpawnedEnemy;
-    private int enemySpawnCooldown = 10000;
+    private int enemySpawnCooldown = 1000;
     private int astroidCooldown = 5000;
     private final GameKeys keys = new GameKeys();
     private int Score = 0;
