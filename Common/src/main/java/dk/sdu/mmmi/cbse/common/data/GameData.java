@@ -15,8 +15,8 @@ public class GameData {
     private int enemyMoveCooldown = 100;
     private long lastSpawnedAstroid;
     private long lastSpawnedEnemy;
-    private int enemySpawnCooldown = 1000;
-    private int astroidCooldown = 5000;
+    private int enemySpawnCooldown = 5000;
+    private int astroidCooldown = 4000;
     private final GameKeys keys = new GameKeys();
     private int Score = 0;
 
@@ -25,35 +25,20 @@ public class GameData {
         return keys;
     }
 
-    public void setDisplayWidth(int width) {
-        this.displayWidth = width;
-    }
-
     public int getDisplayWidth() {
         return displayWidth;
-    }
-
-    public void setDisplayHeight(int height) {
-        this.displayHeight = height;
     }
 
     public int getDisplayHeight() {
         return displayHeight;
     }
 
-    public int getWorldWidth() {
-        return worldWidth;
-    }
     public int getWorldHeight() {
         return worldHeight;
     }
 
     public int getFireRate() {
         return fireRate;
-    }
-
-    public void setFireRate(int fireRate) {
-        this.fireRate = fireRate;
     }
 
     public long getLastFiredBullet() {
@@ -68,10 +53,6 @@ public class GameData {
         return bulletCooldown;
     }
 
-    public void setBulletCooldown(int bulletCooldown) {
-        this.bulletCooldown = bulletCooldown;
-    }
-
     public long getLastSpawnedAstroid() {
         return lastSpawnedAstroid;
     }
@@ -84,42 +65,6 @@ public class GameData {
         return astroidCooldown;
     }
 
-    public void setAstroidCooldown(int astroidCooldown) {
-        this.astroidCooldown = astroidCooldown;
-    }
-
-    public int getEnemyBulletCooldown() {
-        return EnemyBulletCooldown;
-    }
-
-    public void setEnemyBulletCooldown(int enemyBulletCooldown) {
-        EnemyBulletCooldown = enemyBulletCooldown;
-    }
-
-    public long getLastFiredEnemyBullet() {
-        return lastFiredEnemyBullet;
-    }
-
-    public void setLastFiredEnemyBullet(long lastFiredEnemyBullet) {
-        this.lastFiredEnemyBullet = lastFiredEnemyBullet;
-    }
-
-    public long getLastEnemyMove() {
-        return lastEnemyMove;
-    }
-
-    public void setLastEnemyMove(long lastEnemyMove) {
-        this.lastEnemyMove = lastEnemyMove;
-    }
-
-    public int getEnemyMoveCooldown() {
-        return enemyMoveCooldown;
-    }
-
-    public void setEnemyMoveCooldown(int enemyMoveCooldown) {
-        this.enemyMoveCooldown = enemyMoveCooldown;
-    }
-
     public long getLastSpawnedEnemy() {
         return lastSpawnedEnemy;
     }
@@ -130,10 +75,6 @@ public class GameData {
 
     public int getEnemySpawnCooldown() {
         return enemySpawnCooldown;
-    }
-
-    public void setEnemySpawnCooldown(int enemySpawnCooldown) {
-        this.enemySpawnCooldown = enemySpawnCooldown;
     }
 
     public int getScore() {

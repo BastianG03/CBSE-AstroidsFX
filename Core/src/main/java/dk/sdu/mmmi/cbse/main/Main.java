@@ -39,9 +39,9 @@ public class Main extends Application {
     public void start(Stage window) throws Exception {
 
         gameWindow.setPrefSize(gameData.getDisplayWidth(), gameData.getDisplayHeight());
-        gameWindow.getChildren().add(score);
         score.setX(10);
         score.setY(10);
+        gameWindow.getChildren().add(score);
         gameWindow.getChildren().add(health);
         health.setX(gameData.getDisplayWidth() -100);
         health.setY(10);

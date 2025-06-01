@@ -19,7 +19,7 @@ public class EnemyMovementSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
 
         for (Entity enemy : world.getEntities(Enemy.class)) {
-            if(canFire((Enemy) enemy, gameData)) {
+            if(canFire( enemy, gameData)) {
                 getBulletSPIs().stream().findFirst().ifPresent(
                         spi -> {world.addEntity(spi.createBullet(enemy, gameData));
                             enemy.setLastFiredBullet(System.currentTimeMillis());

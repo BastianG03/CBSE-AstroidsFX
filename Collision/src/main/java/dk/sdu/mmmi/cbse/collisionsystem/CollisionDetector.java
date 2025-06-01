@@ -1,7 +1,6 @@
 package dk.sdu.mmmi.cbse.collisionsystem;
 
 import dk.sdu.mmmi.cbse.common.asteroids.IAsteroidSplitter;
-import dk.sdu.mmmi.cbse.common.bullet.Bullet;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;

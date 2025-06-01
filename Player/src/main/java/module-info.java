@@ -9,3 +9,4 @@ module Player {
     provides IGamePluginService with dk.sdu.mmmi.cbse.playersystem.EnemyPlugin;
     provides IEntityProcessingService with dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
 }
+
