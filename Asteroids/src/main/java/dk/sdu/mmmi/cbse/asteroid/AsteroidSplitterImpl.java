@@ -30,7 +30,7 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             asteroid1.setY(e.getY()+rndSpawn);
             asteroid1.setRadius(e.getRadius()/2);
             asteroid1.setRotation(e.getRotation() + 60);
-            asteroid1.setHealth(200);
+            asteroid1.setHealth(100);
             asteroid1.setSide(e.getSide());
             world.addEntity(asteroid1);
 
@@ -39,7 +39,7 @@ public class AsteroidSplitterImpl implements IAsteroidSplitter {
             asteroid2.setY(e.getY()-rndSpawn);
             asteroid2.setRadius(e.getRadius()/2);
             asteroid2.setRotation(e.getRotation() - 60);
-            asteroid2.setHealth(200);
+            asteroid2.setHealth(100);
             asteroid2.setSide(e.getSide());
             world.addEntity(asteroid2);
 
